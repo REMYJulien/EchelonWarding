@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Echelon Warding</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script>window.$ = window.jQuery = require('../node_modules/jquery');</script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<body style="background-color:#e0e0d1">
+		<div class="ui inverted menu">
+  		<div class="header item">
+				Echelon Warding
+			</div>
+			<a class="item" href="index.html">Home</a>
+			<a class="item" href="form_injector.html">New match</a>
+			<a class="item" href="conf.html">New team/player</a>
+			<a class="item" href="form_visualization.html">Visualization</a>
+			<a class="item active" href="I_O.html">Import/Export</a>
+			<a class="item" href="help.html">Help</a>
+			</div>
+
+
+			<div class="ui centered grid">
+				<div class="four wide column">
+					<form class="ui form">
+						<h3 class="ui dividing header">Import</h3>
+						<div class="field">
+							<input class="ui inverted orange input" type="file" id="files" name="file" />
+							</div>
+							<div class="field">
+								<span class="readBytesButtons">
+								  <button class="ui inverted orange button" id="import_button">Import</button>
+								</span>​
+							</div>
+							<h3 class="ui dividing header">Export</h3>
+
+								<div class="field">
+									<label class="ui orange label">Save as </label>
+									<input type="text" id="filename" placeholder="File name">
+								</div>
+								<div class="field">
+									<label class="ui orange label">Team</label>
+									<select id="team" class="ui fluid selection dropdown"></select>
+								</div>
+								<div class="field">
+									<label class="ui orange label">Competition</label>
+									<select id="competition" class="ui fluid selection dropdown"></select>
+								</div>
+								<div class="field">
+										<label class="ui orange label">Game</label>
+								  <input id="game" class="ui orange input"></input>
+								</div>
+								<div class="field">
+									<button id="export_button"  class="ui inverted orange button">Export</button>
+								</div>
+						</form>
+				</div>
+			</div>
+
+
+
+		 </body>
+    <script>
+      require('../js/I_O.js')
+    </script>

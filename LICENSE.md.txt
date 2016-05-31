@@ -1,0 +1,2 @@
+Copyright (c) 2016 Julien REMY, Inc. All rights reserved.*
+All files included in the distribution are bound to this license, regardless of whether each particular file mentions the license.

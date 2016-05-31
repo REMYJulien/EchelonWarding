@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Echelon Warding</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script>window.$ = window.jQuery = require('../node_modules/jquery');</script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<body style="background-color:#e0e0d1">
+
+			<!--header menu-->
+			<div class="ui inverted menu">
+				<div class="header item">
+					Echelon Warding
+				</div>
+				<a class="item" href="index.html">Home</a>
+				<a class="item active" href="form_injector.html">New match</a>
+				<a class="item" href="conf.html">New team/player</a>
+				<a class="item" href="form_visualization.html">Visualization</a>
+				<a class="item" href="I_O.html">Import/Export</a>
+				<a class="item" href="help.html">Help</a>
+			</div>
+
+			<div class="ui centered grid">
+				<div class="four wide column">
+					<form class="ui form">
+							<div class="field">
+							<label class="ui label orange inverted">
+								Select competition
+							</label>
+							<select name="team" class="ui inverted fluid selection dropdown"  id="competition">
+							</select>
+			      </div>
+						<div class="field">
+								<label class="ui label orange inverted">
+								Select team
+							</label>
+							<select value="" name="team" class="ui fluid selection dropdown inverted" id="team">
+							</select>
+						</div>
+						<div class="field">
+								<label class="ui label orange inverted">
+									Select side
+								</label>
+							<select  name="team" class="ui inverted fluid selection dropdown" id="side">
+								<option value="" selected disabled>Side</option>
+								<option value="blue">Blue side</option>
+								<option value="red">Red side</option>
+							</select>
+						</div>
+						<div class="field">
+								<label class="ui label orange inverted">
+								Select opponant
+							</label>
+							<select  name="team" class="ui inverted fluid selection dropdown" id="opponant">
+							</select>
+						</div>
+						<div class="field">
+							<label class="ui label orange inverted">
+								Game's name
+							</label>
+							<input class="ui large input" type="game" id="game" name="game" placeholder="ex: Game 1">
+						</div>
+				</form>
+					<button  id="button" class="ui inverted orange button">New match</button>
+			</div>
+			<div class="ten wide column">
+					<div class="ui segments">
+						<a class="ui  top attached label">Matches's list</a>
+						<div id ="all_matches">
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</body>
+
+  <script>
+    require('../js/form_injector.js')
+  </script>
+
+</html>

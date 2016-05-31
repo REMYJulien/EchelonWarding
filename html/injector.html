@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>Echelon Warding</title>
+	</head>
+
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script>window.$ = window.jQuery = require('../node_modules/jquery');</script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<body style="background-color:#e0e0d1">
+		<div class="ui inverted menu">
+			<div class="header item">
+				Echelon Warding
+			</div>
+			<a class="item" href="index.html">Home</a>
+			<a class="item active" href="form_injector.html">New match</a>
+			<a class="item" href="conf.html">New team/player</a>
+			<a class="item" href="form_visualization.html">Visualization</a>
+			<a class="item" href="I_O.html">Import/Export</a>
+			<a class="item" href="help.html">Help</a>
+		</div>
+
+	<div class="ui grid centered container">
+		<div class="row">
+		</div>
+		<div class="row">
+
+			<table class="ui fixed inverted table" >
+				<thead>
+					<tr  class="center aligned">
+						 <th>Competition</th>
+						 <th>Team</th>
+						 <th>Side</th>
+						 <th>Opponant</th>
+						 <th>Game</th>
+					</tr>
+				</thead>
+				<tbody id="title">
+				</tbody>
+			</table>
+		</div>
+		<div class="row">
+		</div>
+	</div>
+		<!--parameters-->
+
+		<div class="ui centered container">
+			<div class="ui grid">
+				<div class="four wide column">
+					<form class="ui form">
+						<div class="field">
+							<label class="ui orange label">
+								Timer :
+							</label>
+							<div class="two fields">
+								<div class="field">
+									<input type="text" id="timer" name="Start timer" placeholder="Start timer">
+								</div>
+								<div class="field">
+									<input type="text" id="death_timer" name="Expiration timer" value="00:00">
+								</div>
+							</div>
+						</div>
+						<div class="fields">
+							<div class="sixteen wide field">
+								<label class="ui orange label">
+									Trincket :
+								</label>
+								<select  name="team" class="ui inverted selection dropdown" id="ward">
+									<option value="trincket">Trincket</option>
+									<option value="blue_Tincket">Blue trincket</option>
+									<option value="pink_ward">Pink ward</option>
+									<option value="tracker_Knife">Tracker's Knife</option>
+									<option value="sightstone">Sightstone</option>
+								</select>
+							</div>
+						</div>
+						<div class="fields">
+							<div class="sixteen wide field">
+								<label class="ui orange label">
+									Player :
+								</label>
+								<select class="ui inverted selection dropdown" id="players">
+								</select>
+							</div>
+						</div>
+						<button id="submit_button" class="ui orange button inverted">Save</button>
+				</form>
+		  </div>
+						<canvas id="map_canvas" width=600 height=600 style=" padding-left: 0;
+						padding-right: 0;margin-left: auto;margin-right: auto;display: block;"></canvas>
+			</div>
+		</div>
+
+		<div class="ui centered grid container">
+			<div class="row">
+			</div>
+			<div>
+				<table class="ui fixed inverted table" >
+					<thead>
+						<tr class="center aligned">
+							<th>
+								Ward type
+							</th>
+							<th>
+								Player
+							</th>
+							<th>
+								Timer
+							</th>
+							<th>
+								Death timer
+							</th>
+							<th>
+								Delete
+							</th>
+							<th>
+								Save
+							</th>
+						</tr>
+					</thead>
+					<tbody id="list_ward">
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</body>
+
+	<script>
+		require('../js/injector.js');
+	</script>
+</html>

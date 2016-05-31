@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>Echelon Warding</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script>window.$ = window.jQuery = require('../node_modules/jquery');</script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<body style="background-color:#e0e0d1">
+
+		<div class="ui inverted menu">
+			<div class="header item">
+				Echelon Warding
+			</div>
+			<a class="item" href="index.html">Home</a>
+			<a class="item" href="form_injector.html">New match</a>
+			<a class="item" href="conf.html">New team/player</a>
+			<a class="item active" href="form_visualization.html">Visualization</a>
+			<a class="item" href="I_O.html">Import/Export</a>
+			<a class="item" href="help.html">Help</a>
+		</div>
+
+	<div class="ui grid centered container">
+		<div class="row">
+		</div>
+		<div>
+			<table class="ui fixed inverted table">
+				<thead>
+					<tr class="center aligned">
+				     <th>Competition</th>
+				     <th>Team</th>
+						 <th>Side</th>
+						 <th>Opponant</th>
+						 <th>Game</th>
+				  </tr>
+				</thead>
+				<tbody id="title">
+				</tbody>
+			</table>
+		</div>
+	</div>
+			<div class="ui centered five column grid">
+				<div class="row">
+				</div>
+				<div class="row">
+
+					<div class="ui icon buttons">
+						<a class="ui label" id="time_animation">
+							<p>00 : 00</p>
+						</a>
+						<button id="minus" class="ui button">
+							<i class="fast backward icon"></i>
+						</button>
+						<button id="play" class="ui button">
+							<i class="play icon"></i>
+						</button>
+						<button id="stop" class="ui button">
+							<i class="pause icon"></i>
+						</button>
+						<button id="plus" class="ui button">
+							<i class="fast forward icon"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="ui centered grid">
+					<div class="four wide column">
+						<form class="ui form">
+							<div class="field">
+								<label class="ui orange label">Start timer </label>
+									<input id="start_timer" type="text" placeholder="Start timer">
+								</select>
+							</div>
+							<div class="field">
+								<label class="ui orange label">End timer </label>
+									<input id="end_timer" type="text" placeholder="End timer">
+								</select>
+							</div>
+							<div class="field">
+								<label class="ui orange label">Ward's type </label>
+									<select id="wards">
+										<option value="All">All</option>
+										<option value="trincket">Trincket</option>
+										<option value="blue_Tincket">Blue trincket</option>
+										<option value="pink_ward">Pink ward</option>
+										<option value="tracker_Knife">Tracker's Knife</option>
+										<option value="sightstone">Sightstone</option>
+									</select>
+								</select>
+							</div>
+							<div class="field">
+								<label class="ui orange label">Player </label>
+									<select id="players">
+										</select>
+								</select>
+							</div>
+							<div class="field">
+								<label class="ui orange label">Display type </label>
+								<select id="type_visu">
+									<option value="heatmap">HeatMap</option>
+									<option value="points">Points</option>
+								</select>
+							</div>
+							<button class="ui orange button inverted" id="visualize">Visualize</button>
+						</form>
+					</div>
+					<div class="ten wide column">
+						<canvas id="map_canvas" width=600 height=600></canvas>
+					</div>
+				</div>
+
+
+		</div>
+	</body>
+  <script>
+    require('../js/visu.js')
+  </script>
+
+</html>

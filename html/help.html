@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Echelon Warding</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script>window.$ = window.jQuery = require('../node_modules/jquery');</script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<body style="background-color:#e0e0d1">
+		<div class="ui inverted menu">
+  		<div class="header item">
+				Echelon Warding
+			</div>
+			<a class="item" href="index.html">Home</a>
+			<a class="item" href="form_injector.html">New match</a>
+			<a class="item" href="conf.html">New team/player</a>
+			<a class="item" href="form_visualization.html">Visualization</a>
+			<a class="item" href="I_O.html">Import/Export</a>
+			<a class="item active" href="help.html">Help</a>
+			</div>
+			<div class="ui centered container">
+				<h1 class="ui orange header">Echelon warding</h1>
+				<h2 class="ui orange header">Warding analytic tool</h2>
+				<div class="ui  raised segment">
+				  <p>Echelon Warding is a tool which provide some features to analyze
+						warding pattern of teams and players. </br> Currently Echelon Warding is in beta</p>
+				</div>
+				<h2 class="ui orange header">Add player or competition</h2>
+				<div class="ui raised  segment">
+					<p>First step you have to do to register new match is adding at least one player and one competition.
+						In order to add competition you just have to write it name and click on save button </br>
+						For player you have to fill his name and the name of his team.
+					 </p>
+				 </div>
+				 <div class="ui raised  segment">
+					 <p><i class="warning icon"></i> WARNING : You have to write carefully the name of competitions,
+						 teams and players. As soon you save them in the database, you won't be able to modify them.
+						 Also, input are case sensitive. This means 'Soaz' and 'SoAZ' won't be the same player in database. </br>
+						 I would recommend to write all names in lower or upper case to avoid many problems.
+						</p>
+					</div>
+				<h2 class="ui orange header">Create new match</h2>
+				<div class="ui raised  segment">
+					<p>To create new match you have to select the team you want to study, side where team is playing,
+					it opponant, the competition and input a name for the game. Except game's name which is optionnal, all other parameters
+				  must be fit.</p>
+				</div>
+				<div class="ui raised  segment">
+					<p>After submit form you will get a page where you can add some data. To add ward in database you have to
+						click on the map. If everything goes ok, now you see a point and circle on the map. Next step
+						is to write start timer,death timer,player who put it and type of the ward. You probably don't know
+						when the ward will expire (ward can be destroy by opponant players), but it doesn't matter, you must
+						entry timer or let the default timer (00:00). </br></br>If everything is ok, you can click on save button and
+						you should see now a new entry in table below the map. As you can see you have two buttons in table. First
+						one will delete the ward from database , second will allow you to confirm new death timer of the ward.
+						To update death timer, you have to first click on cell of expiration timer and then click on save button.
+					 </p>
+				 </div>
+				 <div class="ui raised  segment">
+					<p><i class="warning icon"></i> WARNING : Timer format MUST BE "MM:SS" (ex : 06:00 is ok ,6:00 06:0,6:0 are  not).
+						If you use an other format you will have majors issues in visualization section. </br> Also be carreful, if you don't click
+						on save button after you enter new expiration timer for a ward , database won't be update.
+					 </p>
+				 </div>
+				<h2 class="ui orange header">Analyze warding pattern</h2>
+				<div class="ui  raised segment">
+					<p>To visualize team pattern warding, you have to fill form on visualization page. Team and side selection are mandatory
+					, other input are optionnals.</p>
+				</div>
+				<div class="ui raised segment">
+					<p>When you submit the form you will reach the analytic page. There are few features :</p>
+					<ul class="ui list">
+						<li>Filter </li>
+						<p> You can filter ward by type and by player who put them on map</p>
+						<li>Timer </li>
+						<p>You can filter ward on map inside an interval. Every wards which were on map
+							at least 1 second during this interval will be displayed.</p>
+						<li>Display type </li>
+						<p>You can display wards under two types : heatmap and point. With point you can see wards by type
+						where : </br>Yellow = Trinket</br>Blue = blue trincket</br>Green = Tracker's knife</br>White = sightstone
+						<li>Animation</li>
+						<p> With audio button you see warding evolution across game</p>
+					</ul>
+				</div>
+			</div>
+		</body>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Echelon Warding</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script>window.$ = window.jQuery = require('../node_modules/jquery');</script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<body style="background-color:#e0e0d1">
+		<div class="ui inverted menu">
+			<div class="header item">
+				Echelon Warding
+			</div>
+			<a class="item" href="index.html">Home</a>
+			<a class="item" href="form_injector.html">New match</a>
+			<a class="item active" href="conf.html">New team/player</a>
+			<a class="item" href="form_visualization.html">Visualization</a>
+			<a class="item" href="I_O.html">Import/Export</a>
+			<a class="item" href="help.html">Help</a>
+		</div>
+
+		<div class="ui centered grid">
+			<div class="four wide column">
+				<form class="ui form">
+						  <div class="field">
+						  		<label class="ui orange label">Add competition</label>
+									<input type="text" placeholder="Write compet's name"
+									id="input_competition" name="input_competition" >
+						  </div>
+								<button id="add_competition" class="ui button inverted orange">Add</button>
+				</form>
+				</div>
+				<div class="ten wide column">
+							<table class="ui fixed table">
+								<thead>
+									<tr class="center aligned">
+										<th>
+											Competition
+										</th>
+										<th>
+											Delete
+										</th>
+									</tr>
+								</thead>
+								<tbody id="list_competition">
+								</tbody>
+							</table>
+						</div>
+		</div>
+
+		<div class="ui centered grid">
+			<div class="four wide column">
+				<form class="ui form">
+							<div class="field">
+								<label class="ui orange label">Team name</label>
+								<input type="text" placeholder="Write team's name"
+								id="input_team" name="input_team" >
+							</div>
+							<div class="field">
+									<label class="ui orange label">Player name</label>
+								<input type="text" placeholder="Write player's name"
+								id="input_player">
+							</div>
+							<button id="add_player" class="ui button inverted orange">Add</button>
+				</form>
+			</div>
+			<div class="ten wide column">
+				<table  class="ui fixed table">
+					<thead>
+						<tr class="center aligned">
+							<th>
+								Player
+							</th>
+							<th>
+								Team
+							</th>
+							<th>
+								Delete
+							</th>
+						</tr>
+					</thead>
+					<tbody id="list_player">
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</body>
+</div>
+  <script>
+    require("../js/conf.js")
+  </script>
+</html>
